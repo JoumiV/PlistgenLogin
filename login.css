@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('a.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-direction: row;
+}
+
+
+.left-column {
+    width: 50%;
+    padding: 40px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.left-column h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+input {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+    border-radius: 30px;
+    color: white;   
+}
+
+button {
+    margin-left: 80px;
+    width: 50%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.952);
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #929292;
+}
+
+
+.right-column {
+    width: 50%;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-column h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.right-column h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+
+@media (max-width: 768px) {
+    
+    .container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 20px; 
+    }
+
+ 
+    button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    
+    .right-column h1 {
+        font-size: 2em;
+    }
+
+    .right-column h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+   
+    .container {
+        width: 100%; 
+        margin: 10px;
+    }
+
+    .right-column h1 {
+        font-size: 1.5em;
+    }
+
+    .right-column h3 {
+        font-size: 1em;
+    }
+
+    button, input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
